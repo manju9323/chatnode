@@ -3,7 +3,7 @@ const bcrypt=require("bcrypt");
 const jwt =require("jsonwebtoken");
 require('dotenv').config();
 const {createError}=require("../error");
-const { NextPlan } = require("@mui/icons-material");
+
 
 //register post
 register=async(req,res,next)=>{  
