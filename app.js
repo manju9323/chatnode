@@ -1,6 +1,7 @@
 const express=require("express")
 //const jwt =require("jsonwebtoken");
 const cors=require('cors')
+const morgan=require('morgan')
 const {connect}=require('./dbconnect');
 const conversation=require('./route/conversation')
 const message=require('./route/message')
@@ -11,6 +12,7 @@ const app=express();
 
 app.set("view engine","ejs");
 app.use(cors());
+app.use(morgan());
 app.use(express.json()); 
 app.use(express.urlencoded({extended:true})) 
 
